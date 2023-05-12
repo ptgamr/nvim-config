@@ -203,7 +203,7 @@ require('lazy').setup({
 -- See `:help vim.o`
 
 -- Set highlight on search
-vim.o.hlsearch = false
+vim.o.hlsearch = true
 
 -- Make line numbers default
 vim.wo.number = true
@@ -514,3 +514,7 @@ vim.cmd([[map <C-j> <C-W>j]])
 vim.cmd([[map <C-k> <C-W>k]])
 vim.cmd([[map <C-h> <C-W>h]])
 vim.cmd([[map <C-l> <C-W>l]])
+
+-- Disable highlight when <leader><cr> is pressed
+vim.cmd([[map <silent> <leader><cr> :noh<cr>]])
+vim.keymap.set('n', '<C-f>', require('telescope.builtin').find_files, { desc = 'Ctrl + F (Telescope search)' })
