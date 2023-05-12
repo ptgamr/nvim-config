@@ -40,6 +40,7 @@ P.S. You can delete this when you're done too. It's your config now :)
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+vim.wo.relativenumber = true
 
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
@@ -504,3 +505,8 @@ cmp.setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+-- MY CONFIGS
+-- vim.keymap.set('n', ',w', ':w', { desc = "Save file" })
+vim.cmd([[nnoremap ,w <cmd>:w<CR>]])
+
