@@ -510,3 +510,7 @@ cmp.setup {
 -- vim.keymap.set('n', ',w', ':w', { desc = "Save file" })
 vim.cmd([[nnoremap ,w <cmd>:w<CR>]])
 
+vim.cmd([[map <C-j> <C-W>j]])
+vim.cmd([[map <C-k> <C-W>k]])
+vim.cmd([[map <C-h> <C-W>h]])
+vim.cmd([[map <C-l> <C-W>l]])
