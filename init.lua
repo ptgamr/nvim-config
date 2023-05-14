@@ -38,8 +38,10 @@ P.S. You can delete this when you're done too. It's your config now :)
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+-- vim.g.mapleader = ' '
+-- vim.g.maplocalleader = ' '
+vim.g.mapleader = ','
+vim.g.maplocalleader = ','
 vim.wo.relativenumber = true
 
 -- Install package manager
@@ -422,7 +424,7 @@ local servers = {
   -- gopls = {},
   -- pyright = {},
   -- rust_analyzer = {},
-  -- tsserver = {},
+  tsserver = {},
 
   lua_ls = {
     Lua = {
@@ -505,16 +507,3 @@ cmp.setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-
--- MY CONFIGS
--- vim.keymap.set('n', ',w', ':w', { desc = "Save file" })
-vim.cmd([[nnoremap ,w <cmd>:w<CR>]])
-
-vim.cmd([[map <C-j> <C-W>j]])
-vim.cmd([[map <C-k> <C-W>k]])
-vim.cmd([[map <C-h> <C-W>h]])
-vim.cmd([[map <C-l> <C-W>l]])
-
--- Disable highlight when <leader><cr> is pressed
-vim.cmd([[map <silent> <leader><cr> :noh<cr>]])
-vim.keymap.set('n', '<C-f>', require('telescope.builtin').find_files, { desc = 'Ctrl + F (Telescope search)' })
