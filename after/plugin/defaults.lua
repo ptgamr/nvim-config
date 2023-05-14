@@ -24,4 +24,3 @@ vim.cmd([[noremap gb gT]])
 
 -- Disable highlight when <leader><cr> is pressed
 vim.cmd([[map <silent> <leader><cr> :noh<cr>]])
-vim.keymap.set('n', '<C-f>', require('telescope.builtin').find_files, { desc = 'Ctrl + F (Telescope search)' })
