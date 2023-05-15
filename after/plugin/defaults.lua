@@ -20,6 +20,7 @@ vim.cmd([[noremap <leader>9 9gt]])
 vim.cmd([[noremap <leader>0 :tablast<cr>]])
 vim.cmd([[noremap <leader>tn :tabnew<cr>]])
 vim.cmd([[noremap <leader>tc :tabclose<cr>]])
+vim.cmd([[noremap <leader>to :tabonly<cr>]])
 vim.cmd([[noremap gb gT]])
 
 -- Disable highlight when <leader><cr> is pressed
