@@ -1,0 +1,2 @@
+require("ptgamr")
+print("Hello")
