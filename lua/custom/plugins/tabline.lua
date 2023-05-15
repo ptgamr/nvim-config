@@ -9,7 +9,8 @@ return {
       fnamemodify = ':t',          -- file name modifier
       modify_indicator = '[+]',    -- modify indicator
       no_name = 'No name',         -- no name buffer name
-      brackets = { '[', ']' },     -- file name brackets surrounding
+      -- brackets = { '[', ']' },     -- file name brackets surrounding
+      brackets = {'', ''},
       inactive_tab_max_length = 0  -- max length of inactive tab titles, 0 to ignore
     }
   end
