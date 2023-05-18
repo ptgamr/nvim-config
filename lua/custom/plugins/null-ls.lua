@@ -5,23 +5,28 @@
 return {
   "jose-elias-alvarez/null-ls.nvim",
   version = "*",
-  config = function ()
+  config = function()
     local null_ls = require("null-ls")
     null_ls.setup({
       debug = true,
       sources = {
-          null_ls.builtins.diagnostics.eslint.with({
-            only_local = "node_modules/.bin",
-            cwd = function()
-                return vim.loop.cwd()
-            end,
-          }),
-          null_ls.builtins.formatting.prettier.with({
-            only_local = "node_modules/.bin",
-            cwd = function()
-                return vim.loop.cwd()
-            end,
-          })
+        null_ls.builtins.diagnostics.eslint_d.with({
+          cwd = function()
+            return vim.loop.cwd()
+          end,
+        }),
+        -- null_ls.builtins.diagnostics.eslint.with({
+        --   only_local = "node_modules/.bin",
+        --   cwd = function()
+        --       return vim.loop.cwd()
+        --   end,
+        -- }),
+        null_ls.builtins.formatting.prettier.with({
+          only_local = "node_modules/.bin",
+          cwd = function()
+            return vim.loop.cwd()
+          end,
+        })
       },
     })
   end
