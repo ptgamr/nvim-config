@@ -7,10 +7,13 @@ return {
   version = "*",
   config = function()
     local null_ls = require("null-ls")
+    local methods = require("null-ls.methods")
+
     null_ls.setup({
       debug = true,
       sources = {
         null_ls.builtins.diagnostics.eslint_d.with({
+          method = methods.internal.DIAGNOSTICS_ON_SAVE,
           cwd = function()
             return vim.loop.cwd()
           end,
