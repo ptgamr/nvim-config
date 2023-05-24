@@ -6,7 +6,7 @@ return {
   version = "*",
   dependencies = {
     "nvim-lua/plenary.nvim",
-    -- "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+    "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
     "MunifTanjim/nui.nvim",
   },
   config = function()
@@ -48,7 +48,7 @@ return {
           indent_size = 2,
           padding = 1, -- extra padding on left hand side
           -- indent guides
-          with_markers = true,
+          with_markers = false,
           indent_marker = "│",
           last_indent_marker = "└",
           highlight = "NeoTreeIndentMarker",
@@ -59,9 +59,9 @@ return {
           expander_highlight = "NeoTreeExpander",
         },
         icon = {
-          folder_closed = "▸",
-          folder_open = "▾",
-          folder_empty = "",
+          -- folder_closed = " ",
+          -- folder_open = " ",
+          -- folder_empty = "",
           -- The next two settings are only a fallback, if you use nvim-web-devicons and configure default icons there
           -- then these will never be used.
           default = "",
@@ -72,7 +72,7 @@ return {
           highlight = "NeoTreeModified",
         },
         name = {
-          trailing_slash = true,
+          trailing_slash = false,
           use_git_status_colors = true,
           highlight = "NeoTreeFileName",
         },
